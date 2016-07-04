@@ -1,0 +1,1149 @@
+/*----------------------------------------
+--- Created: 12/24/2015
+-----------------------------------------*/
+
+#socialsiderbar {
+}
+#socialsiderbar .sidebar-wrapper {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+	z-index: 9999;
+	
+	-webkit-transition: all 500ms;
+	-moz-transition:	all 500ms;
+	-o-transition:		all 500ms;
+	-ms-transition:		all 500ms;
+	transition:			all 500ms;
+}
+
+#socialsiderbar .sidebar-wrapper .sc-item {
+    position: relative;
+    left: 0;
+	margin: 5px 0 5px -105px;
+    width: 132px;
+    list-style: none;
+    cursor: pointer; 
+	display: block;
+	
+	-webkit-border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	-ms-border-radius: 0 3px 3px 0;
+	-o-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+}
+#socialsiderbar:not(.natual-color-on) .sidebar-wrapper .sc-item {
+	background-color: #333;
+}
+
+#socialsiderbar .sidebar-wrapper .sc-item:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#socialsiderbar .sidebar-wrapper .sc-item span {
+	float: left;
+	width: 100px;
+	padding: 8px;
+	line-height: 14px;
+	font-size: 14px;
+	text-align: right;
+	text-transform: capitalize;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	display: block;
+	overflow: hidden;
+}
+#socialsiderbar .sidebar-wrapper .sc-item i {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	bottom: 0;
+	margin-top: -15px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	text-align: center;
+	color: white;
+	
+	-webkit-border-radius: 0 2px 2px 0;
+	-moz-border-radius: 0 2px 2px 0;
+	-ms-border-radius: 0 2px 2px 0;
+	-o-border-radius: 0 2px 2px 0;
+	border-radius: 0 2px 2px 0;
+}
+
+/* button to control social sidebar */
+#socialsiderbar #view-control {
+	position: fixed;
+	bottom: 20px;
+	left: -100px;
+	width: 55px;
+	height: 40px;
+	border: solid 1px #aaa;
+	background: #fff url(../../images/icon-share.png) 8px center no-repeat;
+	background-size: 20px 20px;
+	z-index: 999999;
+	cursor: pointer;
+	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+	filter: alpha(opacity=60);
+	-webkit-opacity: 0.6;
+	-o-opacity: 0.6;
+	-moz-opacity: 0.6;
+	-ms-opacity: 0.6;
+	-khtml-opacity: 0.6;
+	opacity: 0.6;
+
+	-webkit-transition: all 500ms;
+	-moz-transition:	all 500ms;
+	-o-transition:		all 500ms;
+	-ms-transition:		all 500ms;
+	transition:			all 500ms;
+}
+#socialsiderbar #view-control:hover {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-webkit-opacity: 0.8;
+	-o-opacity: 0.;
+	-moz-opacity: 0.8;
+	-ms-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+#socialsiderbar #view-control:after {
+	content: "";	
+	margin: 13px 0 0 32px;
+	width: 12px;
+	height: 12px;
+	border-top: solid 4px #333;
+	border-right: solid 4px #333;
+	display: block;
+	
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	
+	-webkit-transition: margin 500ms;
+	-moz-transition:	margin 500ms;
+	-o-transition:		margin 500ms;
+	-ms-transition:		margin 500ms;
+	transition:			margin 500ms;
+}
+#socialsiderbar #view-control:active {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+	filter: alpha(opacity=40);
+	-webkit-opacity: 0.4;
+	-o-opacity: 0.4;
+	-moz-opacity: 0.4;
+	-ms-opacity: 0.4;
+	-khtml-opacity: 0.4;
+	opacity: 0.4;
+}
+#socialsiderbar #view-control.hide-control {
+	background-position: 25px center;
+}
+#socialsiderbar #view-control.hide-control:after {
+	margin-left: 10px;
+	
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	-ms-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+}
+
+/*#socialsiderbar.mobile-screen {*/
+#socialsiderbar.mobile-screen {
+}
+#socialsiderbar.mobile-screen .sidebar-wrapper {
+	max-height: calc(100% - 160px);
+	border: solid 5px #fff;
+	border-left: none;
+	background-color: #fff;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	
+	-webkit-border-radius: 0 5px 5px 0;
+	-moz-border-radius: 0 5px 5px 0;
+	-ms-border-radius: 0 5px 5px 0;
+	-o-border-radius: 0 5px 5px 0;
+	border-radius: 0 5px 5px 0;
+
+    -webkit-box-shadow: 0 0 10px;
+    -moz-box-shadow: 0 0 10px;
+    -o-box-shadow: 0 0 10px;
+    -ms-box-shadow: 0 0 10px;
+    box-shadow: 0 0 10px;
+
+	-webkit-transition: all 500ms;
+	-moz-transition:	all 500ms;
+	-o-transition:		all 500ms;
+	-ms-transition:		all 500ms;
+	transition:			all 500ms;
+}
+#socialsiderbar.mobile-screen .sidebar-wrapper.hide-sidebar {
+	left: -180px;
+}
+#socialsiderbar.mobile-screen .sc-item {
+	margin-left: 0;
+}
+#socialsiderbar.mobile-screen #view-control {
+	left: 20px;
+}
+
+
+/*
+ * Right Social sidebar
+ */
+[data-socialsider=right] #socialsiderbar .sidebar-wrapper {
+	left: auto;
+	right: 0;
+}
+[data-socialsider=right] #socialsiderbar .sidebar-wrapper.hide-sidebar {
+	margin-left: -40px;
+}
+[data-socialsider=right] #socialsiderbar .sc-item {
+    left: auto;
+	right: -102px;
+	
+	-webkit-border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	-ms-border-radius: 3px 0 0 3px;
+	-o-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+}
+
+[data-socialsider=right] #socialsiderbar .sc-item span {
+    float: right;
+	text-align: left;
+}
+
+[data-socialsider=right] #socialsiderbar .sc-item i {
+	right: auto;
+	left: 0;
+	
+	-webkit-border-radius: 2px 0 0 2px;
+	-moz-border-radius: 2px 0 0 2px;
+	-ms-border-radius: 2px 0 0 2px;
+	-o-border-radius: 2px 0 0 2px;
+	border-radius: 2px 0 0 2px;
+}
+
+
+[data-socialsider=right] #socialsiderbar #view-control {
+	left: auto;
+	right: -180px;
+
+	background-position: 25px center;
+}
+[data-socialsider=right] #socialsiderbar #view-control:after {
+	margin-left: 10px;
+	
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	-ms-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+}
+[data-socialsider=right] #socialsiderbar #view-control.hide-control {
+	background-position: 8px center;
+}
+[data-socialsider=right] #socialsiderbar #view-control.hide-control:after {
+	margin-left: 32px;
+	
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/*#socialsiderbar.mobile-screen {*/
+[data-socialsider=right] #socialsiderbar.mobile-screen {
+}
+[data-socialsider=right] #socialsiderbar.mobile-screen .sidebar-wrapper {
+	left: auto;
+	right: 0px;
+	border-right: none;
+	
+	-webkit-border-radius: 5px 0 0 5px;
+	-moz-border-radius: 5px 0 0 5px;
+	-ms-border-radius: 5px 0 0 5px;
+	-o-border-radius: 5px 0 0 5px;
+	border-radius: 5px 0 0 5px;
+}
+[data-socialsider=right] #socialsiderbar.mobile-screen .sidebar-wrapper.hide-sidebar {
+	right: -180px;
+}
+[data-socialsider=right] #socialsiderbar.mobile-screen .sc-item {
+	right: -5px !important;
+}
+[data-socialsider=right] #socialsiderbar.mobile-screen #view-control {
+	right: 80px;
+}
+
+
+/* social link gropd background */
+.pe-so-bg-500px {
+	background-color: #000;
+}
+
+.pe-so-bg-aim {
+	background-color: #f8981d;
+}
+
+.pe-so-bg-amazon {
+	background-color: #f8981d;
+}
+
+.pe-so-bg-android {
+	background-color: #adbf42;
+}
+
+.pe-so-bg-appstore {
+	background-color: #2b8ef0;
+}
+
+.pe-so-bg-apple {
+	background-color: #666666;
+}
+
+.pe-so-bg-behance {
+	background-color: #131418;
+}
+
+.pe-so-bg-bitbucket {
+	background-color: #083765;
+}
+
+.pe-so-bg-blogger {
+	background-color: #ec672f;
+}
+
+.pe-so-bg-codepen {
+	background-color: #000;
+}
+
+.pe-so-bg-css3 {
+	background-color: #428bc8;
+}
+
+.pe-so-bg-deviantart {
+	background-color: #c5d226;
+}
+
+.pe-so-bg-deviantart1 {
+	background-color: #c5d226;
+}
+
+.pe-so-bg-deviantart2 {
+	background-color: #5dc148;
+}
+
+.pe-so-bg-digg {
+	background-color: #000;
+}
+
+.pe-so-bg-dribbble {
+	background-color: #e84d88;
+}
+
+.pe-so-bg-dropbox {
+	background-color: #1f85e2;
+}
+
+.pe-so-bg-drupal {
+	background-color: #175a8e;
+}
+
+.pe-so-bg-etsy {
+	background-color: #ca6d32;
+}
+
+.pe-so-bg-evernote {
+	background-color: #8bb847;
+}
+
+.pe-so-bg-facebook {
+	background-color: #3e5b98;
+}
+
+.pe-so-bg-firefox {
+	background-color: #ea932f;
+}
+
+.pe-so-bg-flattr {
+	background-color: #f17b30;
+}
+
+.pe-so-bg-forrst {
+	background-color: #5c9a68;
+}
+
+.pe-so-bg-foursquare {
+	background-color: #f94877;
+}
+
+.pe-so-bg-git {
+	background-color: #181616;
+}
+
+.pe-so-bg-github {
+	background-color: #181616;
+}
+
+.pe-so-bg-google_ {
+	background-color: #d93f2d;
+}
+
+.pe-so-bg-google-plus {
+	background-color: #d93f2d;
+}
+
+.pe-so-bg-grooveshark {
+	background-color: #000;
+}
+
+.pe-so-bg-habbo {
+	background-color: #f4d631;
+}
+
+.pe-so-bg-hackernews {
+	background-color: #f07530;
+}
+
+.pe-so-bg-html5 {
+	background-color: #e4723e;
+}
+
+.pe-so-bg-ie {
+	background-color: #398cec;
+}
+
+.pe-so-bg-instagram {
+	background-color: #886354;
+}
+
+.pe-so-bg-jsfiddle {
+	background-color: #4c7dbb;
+}
+
+.pe-so-bg-lanyrd {
+	background-color: #3c80c9;
+}
+
+.pe-so-bg-lastfm {
+	background-color: #d53e2a;
+}
+
+.pe-so-bg-linkedin {
+	background-color: #3371b8;
+}
+
+.pe-so-bg-linux {
+	background-color: #edb933;
+}
+
+.pe-so-bg-love {
+	background-color: #f098af;
+}
+
+.pe-so-bg-myspace {
+	background-color: #030303;
+}
+
+.pe-so-bg-odnolassniki {
+	background-color: #f28431;
+}
+
+.pe-so-bg-openid {
+	background-color: #e68735;
+}
+
+.pe-so-bg-opera {
+	background-color: #c54237;
+}
+
+.pe-so-bg-paypal {
+	background-color: #4299d5;
+}
+
+.pe-so-bg-paypal1 {
+	background-color: #4299d5;
+}
+
+.pe-so-bg-paypal2 {
+	background-color: #4299d5;
+}
+
+.pe-so-bg-piedpiper {
+	background-color: #529749;
+}
+
+.pe-so-bg-pinterest {
+	background-color: #ca3a27;
+}
+
+.pe-so-bg-qq {
+	background-color: #000;
+}
+
+.pe-so-bg-qzone {
+	background-color: #ebb34b;
+}
+
+.pe-so-bg-rdio {
+	background-color: #277fc1;
+}
+
+.pe-so-bg-reddit {
+	background-color: #ef5f30;
+}
+
+.pe-so-bg-renren {
+	background-color: #17609e;
+}
+
+.pe-so-bg-rss {
+	background-color: #ef6130;
+}
+
+.pe-so-bg-safari {
+	background-color: #55a4c8;
+}
+
+.pe-so-bg-safari1 {
+	background-color: #55a4c8;
+}
+
+.pe-so-bg-safari2 {
+	background-color: #55a4c8;
+}
+
+.pe-so-bg-share {
+	background-color: #38692d;
+}
+
+.pe-so-bg-skype {
+	background-color: #3fabe3;
+}
+
+.pe-so-bg-slideshare {
+	background-color: #6aa3a6;
+}
+
+.pe-so-bg-soundcloud {
+	background-color: #ed462f;
+}
+
+.pe-so-bg-spotify {
+	background-color: #7ac701;
+}
+
+.pe-so-bg-stackexchange {
+	background-color: #205798;
+}
+
+.pe-so-bg-stackoverflow {
+	background-color: #f49731;
+}
+
+.pe-so-bg-steam {
+	background-color: #171a20;
+}
+
+.pe-so-bg-stumbleupon {
+	background-color: #e6442e;
+}
+
+.pe-so-bg-tencentweibo {
+	background-color: #3089b3;
+}
+
+.pe-so-bg-trello {
+	background-color: #316782;
+}
+
+.pe-so-bg-tripadvisor {
+	background-color: #679045;
+}
+
+.pe-so-bg-tumblr {
+	background-color: #45556c;
+}
+
+.pe-so-bg-twitch {
+	background-color: #5c4fa3;
+}
+
+.pe-so-bg-twitter {
+	background-color: #4ca6de;
+}
+
+.pe-so-bg-viadeo {
+	background-color: #e4a12d;
+}
+
+.pe-so-bg-vimeo {
+	background-color: #51b5e7;
+}
+
+.pe-so-bg-vine {
+	background-color: #51b489;
+}
+
+.pe-so-bg-vk_com {
+	background-color: #5a7fa6;
+}
+
+.pe-so-bg-wechat {
+	background-color: #afdb24;
+}
+
+.pe-so-bg-weibo {
+	background-color: #c84638;
+}
+
+.pe-so-bg-wikipedia {
+	background-color: #696969;
+}
+
+.pe-so-bg-windows {
+	background-color: #3faeee;
+}
+
+.pe-so-bg-wordpress {
+	background-color: #454342;
+}
+
+.pe-so-bg-wordpress1 {
+	background-color: #454342;
+}
+
+.pe-so-bg-wordpress2 {
+	background-color: #454342;
+}
+
+.pe-so-bg-xing {
+	background-color: #225a61;
+}
+
+.pe-so-bg-yahoo {
+	background-color: #6e2e85;
+}
+
+.pe-so-bg-yahoo1 {
+	background-color: #6e2e85;
+}
+
+.pe-so-bg-yahoo2 {
+	background-color: #342992;
+}
+
+.pe-so-bg-yelp {
+	background-color: #c83a26;
+}
+
+.pe-so-bg-youtube {
+	background-color: #e1422c;
+}
+
+.pe-so-bg-youtube1 {
+	background-color: #e1422c;
+}
+
+.pe-so-bg-youtube2 {
+	background-color: #e1422c;
+}
+
+.pe-so-bg-zerply {
+	background-color: #9dbc79;
+}
+
+.pe-so-bg-bootstrap {
+	background-color: #6f5499;
+}
+
+.pe-so-bg-pixeden {
+	background-color: #95a04a;
+}
+
+.pe-so-bg-magento {
+	background-color: #ed4a19;
+}
+
+.pe-so-bg-sass {
+	background-color: #cc6699;
+}
+
+.pe-so-bg-ubuntu {
+	background-color: #dd4814;
+}
+
+.pe-so-bg-like {
+	background-color: #3e5b98;
+}
+
+.pe-so-bg-chrome {
+	background-color: #000;
+}
+
+.pe-so-bg-delicious {
+	background-color: #000;
+}
+
+.pe-so-bg-ebay {
+	background-color: #000;
+}
+
+.pe-so-bg-flickr {
+	background-color: #000;
+}
+
+.pe-so-bg-googledrive {
+	background-color: #000;
+}
+
+.pe-so-bg-joomla {
+	background-color: #000;
+}
+
+.pe-so-bg-picasa {
+	background-color: #000;
+}
+
+/* social link background color */
+
+.pe-so-bg-500px span {
+	background-color: #000;
+}
+
+.pe-so-bg-aim span {
+	background-color: #f8981d;
+}
+
+.pe-so-bg-amazon span {
+	background-color: #f8981d;
+}
+
+.pe-so-bg-android span {
+	background-color: #adbf42;
+}
+
+.pe-so-bg-appstore span {
+	background-color: #2b8ef0;
+}
+
+.pe-so-bg-apple span {
+	background-color: #666666;
+}
+
+.pe-so-bg-behance span {
+	background-color: #131418;
+}
+
+.pe-so-bg-bitbucket span {
+	background-color: #083765;
+}
+
+.pe-so-bg-blogger span {
+	background-color: #ec672f;
+}
+
+.pe-so-bg-codepen span {
+	background-color: #000;
+}
+
+.pe-so-bg-css3 span {
+	background-color: #428bc8;
+}
+
+.pe-so-bg-deviantart span {
+	background-color: #c5d226;
+}
+
+.pe-so-bg-deviantart1 span {
+	background-color: #c5d226;
+}
+
+.pe-so-bg-deviantart2 span {
+	background-color: #5dc148;
+}
+
+.pe-so-bg-digg span {
+	background-color: #000;
+}
+
+.pe-so-bg-dribbble span {
+	background-color: #e84d88;
+}
+
+.pe-so-bg-dropbox span {
+	background-color: #1f85e2;
+}
+
+.pe-so-bg-drupal span {
+	background-color: #175a8e;
+}
+
+.pe-so-bg-etsy span {
+	background-color: #ca6d32;
+}
+
+.pe-so-bg-evernote span {
+	background-color: #8bb847;
+}
+
+.pe-so-bg-facebook span {
+	background-color: #3e5b98;
+}
+
+.pe-so-bg-firefox span {
+	background-color: #ea932f;
+}
+
+.pe-so-bg-flattr span {
+	background-color: #f17b30;
+}
+
+.pe-so-bg-forrst span {
+	background-color: #5c9a68;
+}
+
+.pe-so-bg-foursquare span {
+	background-color: #f94877;
+}
+
+.pe-so-bg-git span {
+	background-color: #181616;
+}
+
+.pe-so-bg-github span {
+	background-color: #181616;
+}
+
+.pe-so-bg-google_ span {
+	background-color: #d93f2d;
+}
+
+.pe-so-bg-google-plus span {
+	background-color: #d93f2d;
+}
+
+.pe-so-bg-grooveshark span {
+	background-color: #000;
+}
+
+.pe-so-bg-habbo span {
+	background-color: #f4d631;
+}
+
+.pe-so-bg-hackernews span {
+	background-color: #f07530;
+}
+
+.pe-so-bg-html5 span {
+	background-color: #e4723e;
+}
+
+.pe-so-bg-ie span {
+	background-color: #398cec;
+}
+
+.pe-so-bg-instagram span {
+	background-color: #886354;
+}
+
+.pe-so-bg-jsfiddle span {
+	background-color: #4c7dbb;
+}
+
+.pe-so-bg-lanyrd span {
+	background-color: #3c80c9;
+}
+
+.pe-so-bg-lastfm span {
+	background-color: #d53e2a;
+}
+
+.pe-so-bg-linkedin span {
+	background-color: #3371b8;
+}
+
+.pe-so-bg-linux span {
+	background-color: #edb933;
+}
+
+.pe-so-bg-love span {
+	background-color: #f098af;
+}
+
+.pe-so-bg-myspace span {
+	background-color: #030303;
+}
+
+.pe-so-bg-odnolassniki span {
+	background-color: #f28431;
+}
+
+.pe-so-bg-openid span {
+	background-color: #e68735;
+}
+
+.pe-so-bg-opera span {
+	background-color: #c54237;
+}
+
+.pe-so-bg-paypal span {
+	background-color: #4299d5;
+}
+
+.pe-so-bg-paypal1 span {
+	background-color: #4299d5;
+}
+
+.pe-so-bg-paypal2 span {
+	background-color: #4299d5;
+}
+
+.pe-so-bg-piedpiper span {
+	background-color: #529749;
+}
+
+.pe-so-bg-pinterest span {
+	background-color: #ca3a27;
+}
+
+.pe-so-bg-qq span {
+	background-color: #000;
+}
+
+.pe-so-bg-qzone span {
+	background-color: #ebb34b;
+}
+
+.pe-so-bg-rdio span {
+	background-color: #277fc1;
+}
+
+.pe-so-bg-reddit span {
+	background-color: #ef5f30;
+}
+
+.pe-so-bg-renren span {
+	background-color: #17609e;
+}
+
+.pe-so-bg-rss span {
+	background-color: #ef6130;
+}
+
+.pe-so-bg-safari span {
+	background-color: #55a4c8;
+}
+
+.pe-so-bg-safari1 span {
+	background-color: #55a4c8;
+}
+
+.pe-so-bg-safari2 span {
+	background-color: #55a4c8;
+}
+
+.pe-so-bg-share span {
+	background-color: #38692d;
+}
+
+.pe-so-bg-skype span {
+	background-color: #3fabe3;
+}
+
+.pe-so-bg-slideshare span {
+	background-color: #6aa3a6;
+}
+
+.pe-so-bg-soundcloud span {
+	background-color: #ed462f;
+}
+
+.pe-so-bg-spotify span {
+	background-color: #7ac701;
+}
+
+.pe-so-bg-stackexchange span {
+	background-color: #205798;
+}
+
+.pe-so-bg-stackoverflow span {
+	background-color: #f49731;
+}
+
+.pe-so-bg-steam span {
+	background-color: #171a20;
+}
+
+.pe-so-bg-stumbleupon span {
+	background-color: #e6442e;
+}
+
+.pe-so-bg-tencentweibo span {
+	background-color: #3089b3;
+}
+
+.pe-so-bg-trello span {
+	background-color: #316782;
+}
+
+.pe-so-bg-tripadvisor span {
+	background-color: #679045;
+}
+
+.pe-so-bg-tumblr span {
+	background-color: #45556c;
+}
+
+.pe-so-bg-twitch span {
+	background-color: #5c4fa3;
+}
+
+.pe-so-bg-twitter span {
+	background-color: #4ca6de;
+}
+
+.pe-so-bg-viadeo span {
+	background-color: #e4a12d;
+}
+
+.pe-so-bg-vimeo span {
+	background-color: #51b5e7;
+}
+
+.pe-so-bg-vine span {
+	background-color: #51b489;
+}
+
+.pe-so-bg-vk_com span {
+	background-color: #5a7fa6;
+}
+
+.pe-so-bg-wechat span {
+	background-color: #afdb24;
+}
+
+.pe-so-bg-weibo span {
+	background-color: #c84638;
+}
+
+.pe-so-bg-wikipedia span {
+	background-color: #696969;
+}
+
+.pe-so-bg-windows span {
+	background-color: #3faeee;
+}
+
+.pe-so-bg-wordpress span {
+	background-color: #454342;
+}
+
+.pe-so-bg-wordpress1 span {
+	background-color: #454342;
+}
+
+.pe-so-bg-wordpress2 span {
+	background-color: #454342;
+}
+
+.pe-so-bg-xing span {
+	background-color: #225a61;
+}
+
+.pe-so-bg-yahoo span {
+	background-color: #6e2e85;
+}
+
+.pe-so-bg-yahoo1 span {
+	background-color: #6e2e85;
+}
+
+.pe-so-bg-yahoo2 span {
+	background-color: #342992;
+}
+
+.pe-so-bg-yelp span {
+	background-color: #c83a26;
+}
+
+.pe-so-bg-youtube span {
+	background-color: #e1422c;
+}
+
+.pe-so-bg-youtube1 span {
+	background-color: #e1422c;
+}
+
+.pe-so-bg-youtube2 span {
+	background-color: #e1422c;
+}
+
+.pe-so-bg-zerply span {
+	background-color: #9dbc79;
+}
+
+.pe-so-bg-bootstrap span {
+	background-color: #6f5499;
+}
+
+.pe-so-bg-pixeden span {
+	background-color: #95a04a;
+}
+
+.pe-so-bg-magento span {
+	background-color: #ed4a19;
+}
+
+.pe-so-bg-sass span {
+	background-color: #cc6699;
+}
+
+.pe-so-bg-ubuntu span {
+	background-color: #dd4814;
+}
+
+.pe-so-bg-like span {
+	background-color: #3e5b98;
+}
+
+.pe-so-bg-chrome span {
+	background-color: #000;
+}
+
+.pe-so-bg-delicious span {
+	background-color: #000;
+}
+
+.pe-so-bg-ebay span {
+	background-color: #000;
+}
+
+.pe-so-bg-flickr span {
+	background-color: #000;
+}
+
+.pe-so-bg-googledrive span {
+	background-color: #000;
+}
+
+.pe-so-bg-joomla span {
+	background-color: #000;
+}
+
+.pe-so-bg-picasa span {
+	background-color: #000;
+}

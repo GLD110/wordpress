@@ -1,0 +1,158 @@
+/**************************************************************
+ *
+ * Admin Page Custom StyleSheet
+ *
+ * @package  		 TRUEWordpress Theme 1E
+ * @Version			 1.0.1
+ * @file     		 assets/css/admin.css
+ * @author   		 TRUEWordpress Team
+ * @Author Link 	 http://truewordpress.com
+ * @license	 		 GNU General Public License
+ * @license url: 	 http://www.gnu.org/licenses/gpl-3.0.html
+ **************************************************************/
+
+/* TRUEWordpress theme options page  */
+#option-tree-header {
+	margin: 0px;
+	display: none;
+}
+#option-tree-sub-header {
+	margin: 10px 5px 0px 2px;
+	background: white;
+	border-top: 1px solid #ccc;
+}
+#option-tree-options-layouts-form {
+	top: 10px;
+}
+.option-tree-ui-buttons {
+	margin-top: 0px;
+	border-top: none;
+
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
+}
+.option-tree-settings-api .format-setting-label {
+	text-transform: capitalize;
+}
+
+#option-tree-sub-header:before {
+	content: "\f108";
+	font-family: dashicons;
+	font-size: 40px;
+	color: #888;
+	line-height: 40px;
+}
+
+#toplevel_page_ot-settings {
+	/* display: none; */
+}
+
+/*********************************
+ * customize TinyMCE editor
+*/ 
+
+#TB_window {
+	top: 50% !important;
+	left: 50% !important;
+	margin: 0 !important;
+	width: auto !important;
+	height: auto !important;
+	
+	box-sizing: border-box;
+
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#TB_window .after-clear:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#TB_window .form-group {
+	margin: 10px 0;
+	width: 100%;
+}
+
+#TB_window .form-group label,
+#TB_window .form-group .form-control,
+#TB_window .form-group .desc {
+	float: left;
+	margin: 0;
+	display: block;
+}
+
+#TB_window .form-group label {
+	width: 30%;
+	min-width: 100px;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+#TB_window .form-group .form-control {
+	width: 70%;
+	min-width: 150px;
+	height: 30px;
+	font-size: 12px;
+}
+#TB_window .form-group textarea.form-control {
+	height: 150px;
+}
+
+#TB_window .form-group .desc {
+	float: right;
+	margin-top: 10px;
+	width: 70%;
+	min-width: 150px;
+	font-style: Italic;
+}
+
+#TB_window .action-wrapper {
+	margin-top: 10px;
+	padding: 10px 0;
+	border-top: solid 1px #ccc;
+}
+
+#TB_window .action-wrapper .button {
+	float: right;
+}
+
+#TB_window .icons-wrapper {
+	letter-spacing: -1px;
+}
+
+#TB_window .icons-wrapper i.fa {
+	margin: 1px 0;
+	padding: 5px;
+	width: 27px;
+	height: 27px;
+	line-height: 27px;
+	font-size: 25px;
+	text-align: center;
+	border: solid 1px #ccc;
+	cursor: pointer;
+
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+}
+
+#TB_window .icons-wrapper i.fa:hover {
+	border-color: #333;
+}
+
+#TB_window .icons-wrapper i.fa.selected,
+#TB_window .icons-wrapper i.fa:active {
+	color: #fff;
+	background-color: #666;
+	border-color: #666;
+}
